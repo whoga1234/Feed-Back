@@ -91,7 +91,7 @@ section{padding:96px 0 0}
 .card .tx{padding:28px 30px;display:flex;flex-direction:column;justify-content:center;border-left:4px solid var(--c)}
 .card:nth-child(even) .tx{border-left:0;border-right:4px solid var(--c)}
 .part{font-family:'Anton',sans-serif;font-size:13px;letter-spacing:4px;color:var(--c)}
-.card h3{font-family:'Dela Gothic One',sans-serif;font-size:clamp(30px,4.4vw,48px);line-height:1.15;margin-top:4px}
+.card h3{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:clamp(30px,4.2vw,44px);line-height:1.2;letter-spacing:2px;margin-top:4px}
 .card h3 small{display:block;font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:500;color:var(--mute);letter-spacing:3px;margin-top:4px}
 .card dl{display:grid;grid-template-columns:64px 1fr;gap:3px 10px;margin-top:16px;font-size:13.5px}
 .card dt{color:var(--mute);font-size:11px;letter-spacing:2px;padding-top:3px}
@@ -195,8 +195,8 @@ footer .logo{display:inline-block;color:var(--ink);font-size:34px;margin-bottom:
     <img src="img/group.jpg" alt="FEEDBACK">
     <div>
       <div class="big">下北沢の地下から、<br>いちばんうるさい音を。<span class="kr">시모키타자와 지하에서, 가장 시끄러운 소리를.</span></div>
-      <p>日向空（Dr.）を中心に結成された5人組オルタナティヴ・ロックバンド。下北沢のライブハウス「NOISE PIT」を拠点に活動を開始。<span class="kr">히나타 소라(Dr.)를 중심으로 결성된 5인조 얼터너티브 록 밴드. 시모키타자와의 라이브하우스 'NOISE PIT'을 거점으로 활동을 시작했다.</span></p>
-      <p>「キセキのカゲ」が口コミで広がり、メジャーデビュー。デビュー直後、メンバーの体調不良により活動を休止。<span class="kr">'キセキのカゲ'가 입소문으로 퍼지며 메이저 데뷔. 데뷔 직후 멤버의 건강 문제로 활동을 중단했다.</span></p>
+      <p>日向空（Dr.）を中心に結成された5人組オルタナティヴ・ロックバンド。下北沢の地下ライブハウス「NOISE PIT」で、インディーズとして活動を始める。<span class="kr">히나타 소라(Dr.)를 중심으로 결성된 5인조 얼터너티브 록 밴드. 시모키타자와의 지하 라이브하우스 'NOISE PIT'에서 인디 밴드로 활동을 시작했다.</span></p>
+      <p>地下から這い上がり、「キセキのカゲ」でメジャーデビュー。デビュー曲はヒットしたが、その直後、メンバーの体調不良により活動を休止。<span class="kr">지하에서 올라와 'キセキのカゲ'로 메이저 데뷔. 데뷔곡은 히트했지만, 그 직후 멤버의 건강 문제로 활동을 중단했다.</span></p>
       <p>そして1年。FEEDBACKは、もう一度ステージに立つ。<span class="kr">그리고 1년. FEEDBACK은 다시 한 번 무대에 선다.</span></p>
     </div>
   </div>
@@ -219,7 +219,7 @@ footer .logo{display:inline-block;color:var(--ink);font-size:34px;margin-bottom:
     </div>
   </div>
 
-  <div class="sub rv">TRACKS</div>
+  <div class="sub rv">INDIES TRACKS <span style="font-family:'Noto Sans JP';font-size:12px;letter-spacing:2px">— インディーズ時代 / 인디 시절 곡</span></div>
   <div class="tracks rv">
     <div class="yt" id="player"></div>
     <ol id="trackList"></ol>
@@ -247,10 +247,10 @@ const LIVE = {
   title: "RE:FEEDBACK",
   date: "2027-02-04T19:00:00+09:00",   // 복귀 라이브 날짜
   dateText: "2027.02.04 THU",
-  venue: "下北沢 NOISE PIT <span class='kr'>시모키타자와 NOISE PIT</span>",
+  venue: "後日発表 <span class='kr'>추후 공지</span>",
   open: "OPEN 18:00 / START 19:00",
   ticket: "後日発表 <span class='kr'>추후 공지</span>",
-  total: 90                            // 카운트다운 막대 기준 일수
+  dday: 90                             // 표시할 D-day 숫자
 };
 const NEWS = [
   {d:"2026.11.06", tag:"LIVE", hot:1,
@@ -261,14 +261,14 @@ const NEWS = [
    b:"メンバーの体調不良により、FEEDBACKは当面の間、活動を休止いたします。応援してくださる皆様にはご心配をおかけしますことをお詫び申し上げます。", bk:"멤버의 건강 문제로 FEEDBACK은 당분간 활동을 중단합니다. 응원해 주시는 여러분께 걱정을 끼쳐 드려 죄송합니다."},
   {d:"2025.09.03", tag:"RELEASE",
    t:"メジャーデビューシングル「キセキのカゲ」リリース", k:"메이저 데뷔 싱글 'キセキのカゲ' 발매",
-   b:"インディーズ時代から歌い続けてきた「キセキのカゲ」で、FEEDBACKがメジャーデビューしました。", bk:"인디 시절부터 불러 온 'キセキのカゲ'로 FEEDBACK이 메이저 데뷔했습니다."}
+   b:"下北沢の地下ライブハウスから這い上がったインディーズバンド・FEEDBACKが、シングル「キセキのカゲ」でついにメジャーデビューを果たしました。", bk:"시모키타자와 지하 라이브하우스에서 올라온 인디 밴드 FEEDBACK이 싱글 'キセキのカゲ'로 마침내 메이저 데뷔했습니다."}
 ];
 const MEMBERS = [
-  {id:"ren",   c:"#ff2d8a", part:"VOCAL",    jp:"黒崎 蓮",   en:"REN KUROSAKI",   kr:"쿠로사키 렌",   from:"千葉 / 치바",     age:21, q:"うるせぇ、聴け。", qk:"시끄러, 들어."},
-  {id:"shion", c:"#a58be0", part:"GUITAR",   jp:"水瀬 紫苑", en:"SHION MINASE",   kr:"미나세 시온",   from:"京都 / 교토",     age:26, q:"ええ耳してはるなぁ。", qk:"귀가 참 좋으시네.", note:"全曲の作詞・作曲 / 전곡 작사·작곡"},
-  {id:"haku",  c:"#d23a50", part:"BASS",     jp:"白鳥 珀",   en:"HAKU SHIRATORI", kr:"시라토리 하쿠", from:"北海道 / 홋카이도", age:24, q:"特にない。", qk:"딱히 없어."},
-  {id:"sora",  c:"#7ec8e3", part:"DRUMS",    jp:"日向 空",   en:"SORA HINATA",    kr:"히나타 소라",   from:"大阪 / 오사카",   age:27, q:"みんな、おおきに。待っとってな。", qk:"다들 고맙데이. 기다리고 있으래이.", note:"リーダー / 리더"},
-  {id:"amane", c:"#5cc9a7", part:"KEYBOARD", jp:"霧島 天音", en:"AMANE KIRISHIMA",kr:"키리시마 아마네", from:"横浜 / 요코하마", age:29, q:"飴、ある？", qk:"사탕 있어?"}
+  {id:"ren",   c:"#ff2d8a", part:"VOCAL",    jp:"黒崎 蓮",   en:"REN KUROSAKI",   kr:"쿠로사키 렌",   from:"千葉 / 치바",     age:23},
+  {id:"shion", c:"#a58be0", part:"GUITAR",   jp:"水瀬 紫苑", en:"SHION MINASE",   kr:"미나세 시온",   from:"京都 / 교토",     age:26, note:"全曲の作詞・作曲 / 전곡 작사·작곡"},
+  {id:"haku",  c:"#d23a50", part:"BASS",     jp:"白鳥 珀",   en:"HAKU SHIRATORI", kr:"시라토리 하쿠", from:"北海道 / 홋카이도", age:24},
+  {id:"sora",  c:"#7ec8e3", part:"DRUMS",    jp:"日向 空",   en:"SORA HINATA",    kr:"히나타 소라",   from:"大阪 / 오사카",   age:27, note:"リーダー / 리더"},
+  {id:"amane", c:"#5cc9a7", part:"KEYBOARD", jp:"霧島 天音", en:"AMANE KIRISHIMA",kr:"키리시마 아마네", from:"横浜 / 요코하마", age:29}
 ];
 const TRACKS = [
   {t:"解放解放",     k:"해방해방",         yt:"du8DyQ-J2TE", c:"#ff2d8a"},
@@ -286,15 +286,14 @@ $("#newsList").innerHTML=NEWS.map(n=>`<li><time>${n.d}</time><span class="tag ${
 
 $("#liveTitle").textContent=LIVE.title; $("#liveDate").textContent=LIVE.dateText;
 $("#liveVenue").innerHTML=LIVE.venue; $("#liveOpen").textContent=LIVE.open; $("#liveTicket").innerHTML=LIVE.ticket;
-(function(){const d=Math.ceil((new Date(LIVE.date)-new Date())/864e5);
-  $("#cd").innerHTML=d>0?`<span>D-</span>${d}`:(d===0?"TODAY":"<span>THANK YOU</span>");
-  $("#cdBar").style.width=Math.max(0,Math.min(100,(LIVE.total-d)/LIVE.total*100))+"%";})();
+$("#cd").innerHTML=`<span>D-</span>${LIVE.dday}`;
+$("#cdBar").style.width=Math.max(0,Math.min(100,(90-LIVE.dday)/90*100))+"%";
 
 $("#memList").innerHTML=MEMBERS.map(m=>`<article class="card rv" style="--c:${m.c}">
 <div class="pic"><img src="img/${m.id}.jpg" alt="${m.jp}" loading="lazy"></div>
 <div class="tx"><span class="part">${m.part}</span><h3>${m.jp}<small>${m.en} / ${m.kr}</small></h3>
 <dl><dt>FROM</dt><dd>${m.from}</dd><dt>AGE</dt><dd>${m.age}</dd>${m.note?`<dt>NOTE</dt><dd>${m.note}</dd>`:""}</dl>
-<div class="q"><q>${m.q}</q><span class="kr">"${m.qk}"</span></div></div></article>`).join("");
+</div></article>`).join("");
 
 function thumb(el,id){el.dataset.id=id;el.classList.remove("on");el.innerHTML="";el.style.backgroundImage=`url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;}
 function play(el){el.classList.add("on");el.innerHTML=`<iframe src="https://www.youtube.com/embed/${el.dataset.id}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;}
