@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FEEDBACK OFFICIAL SITE</title>
+<meta name="description" content="FEEDBACK — 下北沢発、5人組オルタナティヴ・ロックバンド。">
+<meta property="og:title" content="FEEDBACK OFFICIAL SITE">
+<meta property="og:image" content="img/group.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0c0f;--bg2:#141217;--line:rgba(255,255,255,.1);--ink:#f2f0f4;--mute:#8d8894;--pink:#ff2d8a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP','Noto Sans KR',sans-serif;font-size:15px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.kr{display:block;font-family:'Noto Sans KR',sans-serif;font-size:.82em;color:var(--mute);font-weight:400;line-height:1.6;margin-top:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:linear-gradient(180deg,rgba(13,12,15,.92),rgba(13,12,15,0));transition:background .3s}
+nav.solid{background:rgba(13,12,15,.94);border-bottom:1px solid var(--line)}
+.logo{font-family:'Anton',sans-serif;font-size:24px;letter-spacing:2px;transform:skewX(-8deg);text-shadow:2px 2px 0 var(--pink)}
+nav ul{display:flex;gap:22px;list-style:none;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:2px}
+nav ul a{opacity:.75;transition:.2s}
+nav ul a:hover{opacity:1;color:var(--pink)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(img/group.jpg) center 22%/cover}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,12,15,.25) 0%,rgba(13,12,15,.1) 40%,rgba(13,12,15,.85) 78%,var(--bg) 100%)}
+.hero .in{position:relative;width:100%;padding:0 24px 64px;max-width:1120px;margin:0 auto}
+.hero h1{font-family:'Anton',sans-serif;font-size:clamp(64px,14.5vw,176px);line-height:.9;letter-spacing:2px;transform:skewX(-8deg);transform-origin:0 100%;text-shadow:.04em .04em 0 var(--pink)}
+.hero p{margin-top:18px;font-family:'Dela Gothic One',sans-serif;font-size:clamp(16px,2.6vw,26px);letter-spacing:2px}
+.status{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;padding:4px 12px;border:1px solid var(--pink);color:var(--pink);font-size:12px;font-weight:700;letter-spacing:2px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--pink);animation:bl 1.4s infinite}
+@keyframes bl{50%{opacity:.2}}
+
+/* sections */
+section{padding:96px 0 0}
+.h{display:flex;align-items:baseline;gap:16px;margin-bottom:36px}
+.h h2{font-family:'Anton',sans-serif;font-size:clamp(40px,7vw,72px);line-height:1;letter-spacing:3px;transform:skewX(-8deg)}
+.h h2::first-letter{color:var(--pink)}
+.h span{font-size:12px;color:var(--mute);letter-spacing:3px}
+.h::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* news */
+.news li{list-style:none;display:grid;grid-template-columns:110px 84px 1fr;gap:14px;padding:18px 4px;border-bottom:1px solid var(--line);align-items:start}
+.news time{font-family:'Anton',sans-serif;letter-spacing:1px;color:var(--mute);font-size:15px;padding-top:2px}
+.tag{display:inline-block;text-align:center;font-size:10px;font-weight:700;letter-spacing:2px;padding:3px 0;border:1px solid var(--line);color:var(--mute);margin-top:3px}
+.tag.hot{border-color:var(--pink);color:var(--pink)}
+.news b{font-weight:700}
+.news details summary{cursor:pointer;list-style:none}
+.news details summary::-webkit-details-marker{display:none}
+.news details summary b::after{content:" ＋";color:var(--pink)}
+.news details[open] summary b::after{content:" －"}
+.news .body{margin-top:10px;padding:14px 16px;background:var(--bg2);border-left:2px solid var(--pink);font-size:14px}
+
+/* live */
+.live{display:grid;grid-template-columns:1.1fr .9fr;border:1px solid var(--line);background:var(--bg2)}
+.live .l{padding:36px 32px;border-right:1px solid var(--line);position:relative;overflow:hidden}
+.live .l::before{content:"COMEBACK";position:absolute;right:-10px;bottom:-34px;font-family:'Anton',sans-serif;font-size:130px;line-height:1;color:rgba(255,255,255,.035);transform:skewX(-8deg);white-space:nowrap}
+.live small{font-size:11px;letter-spacing:4px;color:var(--pink);font-weight:700}
+.live h3{font-family:'Anton',sans-serif;font-size:clamp(40px,6vw,68px);line-height:1;margin:8px 0 6px;letter-spacing:2px;transform:skewX(-8deg);transform-origin:0 100%}
+.live .date{font-family:'Anton',sans-serif;font-size:clamp(26px,3.6vw,38px);letter-spacing:2px;margin-top:20px}
+.live dl{margin-top:16px;display:grid;grid-template-columns:70px 1fr;gap:6px 12px;font-size:14px}
+.live dt{color:var(--mute);font-size:11px;letter-spacing:2px;padding-top:4px}
+.live .r{padding:36px 32px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.cd{font-family:'Anton',sans-serif;font-size:clamp(70px,11vw,128px);line-height:1;color:var(--pink);letter-spacing:2px}
+.cd span{font-size:.38em;color:var(--ink);margin-right:6px}
+.bar{width:100%;height:4px;background:rgba(255,255,255,.08);margin-top:18px}
+.bar i{display:block;height:100%;background:var(--pink);width:0}
+
+/* bio */
+.bio{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.bio img{border:1px solid var(--line);box-shadow:14px 14px 0 var(--pink)}
+.bio p{margin-bottom:18px}
+.bio .big{font-family:'Dela Gothic One',sans-serif;font-size:clamp(20px,2.6vw,28px);line-height:1.5;margin-bottom:22px}
+
+/* members */
+.mem{display:grid;gap:14px}
+.card{position:relative;display:grid;grid-template-columns:1.25fr 1fr;background:var(--bg2);border:1px solid var(--line);overflow:hidden}
+.card:nth-child(even){grid-template-columns:1fr 1.25fr}
+.card:nth-child(even) .pic{order:2}
+.card .pic{aspect-ratio:1216/832;overflow:hidden}
+.card .pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .pic img{transform:scale(1.04)}
+.card .tx{padding:28px 30px;display:flex;flex-direction:column;justify-content:center;border-left:4px solid var(--c)}
+.card:nth-child(even) .tx{border-left:0;border-right:4px solid var(--c)}
+.part{font-family:'Anton',sans-serif;font-size:13px;letter-spacing:4px;color:var(--c)}
+.card h3{font-family:'Dela Gothic One',sans-serif;font-size:clamp(30px,4.4vw,48px);line-height:1.15;margin-top:4px}
+.card h3 small{display:block;font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:500;color:var(--mute);letter-spacing:3px;margin-top:4px}
+.card dl{display:grid;grid-template-columns:64px 1fr;gap:3px 10px;margin-top:16px;font-size:13.5px}
+.card dt{color:var(--mute);font-size:11px;letter-spacing:2px;padding-top:3px}
+.card .q{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.card q{font-weight:700;font-size:16px;quotes:"「" "」"}
+
+/* disco */
+.single{display:grid;grid-template-columns:1.5fr 1fr;gap:0;background:var(--bg2);border:1px solid var(--line);margin-bottom:14px}
+.single .tx{padding:28px 30px;display:flex;flex-direction:column;justify-content:center}
+.single h3{font-family:'Dela Gothic One',sans-serif;font-size:clamp(28px,4vw,44px);line-height:1.2;margin:6px 0 10px}
+.yt{position:relative;aspect-ratio:16/9;background:#000 center/cover;cursor:pointer;overflow:hidden}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.25);transition:.2s}
+.yt:hover::before{background:rgba(0,0,0,.05)}
+.yt::after{content:"▶";position:absolute;left:50%;top:50%;width:68px;height:68px;margin:-34px 0 0 -34px;border-radius:50%;background:var(--pink);color:#0d0c0f;font-size:24px;line-height:68px;text-align:center;padding-left:5px;box-shadow:0 0 0 6px rgba(255,45,138,.25)}
+.yt.on::before,.yt.on::after{display:none}
+.tracks{display:grid;grid-template-columns:1.5fr 1fr;border:1px solid var(--line);background:var(--bg2)}
+.tracks ol{list-style:none;border-left:1px solid var(--line)}
+.tracks li{display:flex;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s}
+.tracks li:last-child{border-bottom:0}
+.tracks li:hover{background:rgba(255,255,255,.04)}
+.tracks li.act{background:rgba(255,255,255,.06);box-shadow:inset 3px 0 0 var(--c)}
+.tracks .n{font-family:'Anton',sans-serif;color:var(--mute);width:22px}
+.tracks .dot{width:10px;height:10px;border-radius:50%;background:var(--c);flex:0 0 auto}
+.tracks b{font-weight:700;font-size:15px;line-height:1.3}
+.tracks small{display:block;color:var(--mute);font-size:11px;font-family:'Noto Sans KR',sans-serif;font-weight:400}
+.sub{margin:40px 0 14px;font-family:'Anton',sans-serif;letter-spacing:4px;font-size:15px;color:var(--mute)}
+
+footer{margin-top:110px;padding:40px 24px 50px;border-top:1px solid var(--line);text-align:center;color:var(--mute);font-size:12px;letter-spacing:1px}
+footer .logo{display:inline-block;color:var(--ink);font-size:34px;margin-bottom:10px}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:760px){
+  nav ul{gap:12px;font-size:12px;letter-spacing:1px}
+  .logo{font-size:20px}
+  section{padding-top:72px}
+  .news li{grid-template-columns:86px 1fr}
+  .news .tag{display:none}
+  .live,.bio,.single,.tracks,.card,.card:nth-child(even){grid-template-columns:1fr}
+  .live .l{border-right:0;border-bottom:1px solid var(--line)}
+  .card:nth-child(even) .pic{order:0}
+  .card .tx,.card:nth-child(even) .tx{border:0;border-top:4px solid var(--c);padding:22px}
+  .tracks ol{border-left:0;border-top:1px solid var(--line)}
+  .bio img{box-shadow:8px 8px 0 var(--pink)}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="logo" href="#top">FEEDBACK</a>
+  <ul>
+    <li><a href="#news">NEWS</a></li>
+    <li><a href="#live">LIVE</a></li>
+    <li><a href="#member">MEMBER</a></li>
+    <li><a href="#disco">MUSIC</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="bg"></div>
+  <div class="in">
+    <div class="status"><i></i>COMEBACK LIVE 決定</div>
+    <h1>FEEDBACK</h1>
+    <p>音は、まだ鳴っている。<span class="kr">소리는 아직 울리고 있다.</span></p>
+  </div>
+</header>
+
+<section id="news"><div class="wrap">
+  <div class="h rv"><h2>NEWS</h2><span>お知らせ / 공지</span></div>
+  <ul class="news rv" id="newsList"></ul>
+</div></section>
+
+<section id="live"><div class="wrap">
+  <div class="h rv"><h2>LIVE</h2><span>ライブ / 공연</span></div>
+  <div class="live rv">
+    <div class="l">
+      <small>FEEDBACK COMEBACK LIVE</small>
+      <h3 id="liveTitle"></h3>
+      <div class="date" id="liveDate"></div>
+      <dl>
+        <dt>VENUE</dt><dd id="liveVenue"></dd>
+        <dt>OPEN</dt><dd id="liveOpen"></dd>
+        <dt>TICKET</dt><dd id="liveTicket"></dd>
+      </dl>
+    </div>
+    <div class="r">
+      <small>COUNTDOWN</small>
+      <div class="cd" id="cd"></div>
+      <div class="bar"><i id="cdBar"></i></div>
+      <span class="kr" style="margin-top:12px">1年ぶりのステージまで / 1년 만의 무대까지</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="bio"><div class="wrap">
+  <div class="h rv"><h2>BIOGRAPHY</h2><span>バイオグラフィー / 소개</span></div>
+  <div class="bio rv">
+    <img src="img/group.jpg" alt="FEEDBACK">
+    <div>
+      <div class="big">下北沢の地下から、<br>いちばんうるさい音を。<span class="kr">시모키타자와 지하에서, 가장 시끄러운 소리를.</span></div>
+      <p>日向空（Dr.）を中心に結成された5人組オルタナティヴ・ロックバンド。下北沢のライブハウス「NOISE PIT」を拠点に活動を開始。<span class="kr">히나타 소라(Dr.)를 중심으로 결성된 5인조 얼터너티브 록 밴드. 시모키타자와의 라이브하우스 'NOISE PIT'을 거점으로 활동을 시작했다.</span></p>
+      <p>「キセキのカゲ」が口コミで広がり、メジャーデビュー。デビュー直後、メンバーの体調不良により活動を休止。<span class="kr">'キセキのカゲ'가 입소문으로 퍼지며 메이저 데뷔. 데뷔 직후 멤버의 건강 문제로 활동을 중단했다.</span></p>
+      <p>そして1年。FEEDBACKは、もう一度ステージに立つ。<span class="kr">그리고 1년. FEEDBACK은 다시 한 번 무대에 선다.</span></p>
+    </div>
+  </div>
+</div></section>
+
+<section id="member"><div class="wrap">
+  <div class="h rv"><h2>MEMBER</h2><span>メンバー / 멤버</span></div>
+  <div class="mem" id="memList"></div>
+</div></section>
+
+<section id="disco"><div class="wrap">
+  <div class="h rv"><h2>MUSIC</h2><span>ディスコグラフィー / 음악</span></div>
+
+  <div class="single rv">
+    <div class="yt" data-id="Vjltj8Z3jVQ"></div>
+    <div class="tx">
+      <span class="part" style="--c:var(--pink)">MAJOR DEBUT SINGLE</span>
+      <h3>キセキのカゲ</h3>
+      <p>FEEDBACKの名を広めたメジャーデビュー曲。<br>作詞・作曲：水瀬紫苑<span class="kr">FEEDBACK의 이름을 알린 메이저 데뷔곡.<br>작사·작곡: 미나세 시온</span></p>
+    </div>
+  </div>
+
+  <div class="sub rv">TRACKS</div>
+  <div class="tracks rv">
+    <div class="yt" id="player"></div>
+    <ol id="trackList"></ol>
+  </div>
+
+  <div class="sub rv">MOVIE</div>
+  <div class="single rv">
+    <div class="yt" data-id="HmwqjW-hGn8"></div>
+    <div class="tx">
+      <span class="part" style="--c:var(--pink)">DEBUT MOVIE</span>
+      <h3>FEEDBACK<br>デビュー映像</h3>
+      <p>メジャーデビュー時に公開された映像。<span class="kr">메이저 데뷔 당시 공개된 영상.</span></p>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <div class="logo">FEEDBACK</div>
+  <div>© FEEDBACK OFFICIAL — SHIMOKITAZAWA, TOKYO</div>
+</footer>
+
+<script>
+/* ============ 여기만 고치면 내용이 바뀜 ============ */
+const LIVE = {
+  title: "RE:FEEDBACK",
+  date: "2027-02-04T19:00:00+09:00",   // 복귀 라이브 날짜
+  dateText: "2027.02.04 THU",
+  venue: "下北沢 NOISE PIT <span class='kr'>시모키타자와 NOISE PIT</span>",
+  open: "OPEN 18:00 / START 19:00",
+  ticket: "後日発表 <span class='kr'>추후 공지</span>",
+  total: 90                            // 카운트다운 막대 기준 일수
+};
+const NEWS = [
+  {d:"2026.11.06", tag:"LIVE", hot:1,
+   t:"COMEBACK LIVE「RE:FEEDBACK」開催決定", k:"컴백 라이브 'RE:FEEDBACK' 개최 결정",
+   b:"約1年ぶりとなるワンマンライブの開催が決定しました。チケット情報は後日お知らせいたします。", bk:"약 1년 만의 단독 라이브 개최가 결정되었습니다. 티켓 정보는 추후 안내드리겠습니다."},
+  {d:"2025.11.10", tag:"INFO",
+   t:"活動休止のお知らせ", k:"활동 중단 안내",
+   b:"メンバーの体調不良により、FEEDBACKは当面の間、活動を休止いたします。応援してくださる皆様にはご心配をおかけしますことをお詫び申し上げます。", bk:"멤버의 건강 문제로 FEEDBACK은 당분간 활동을 중단합니다. 응원해 주시는 여러분께 걱정을 끼쳐 드려 죄송합니다."},
+  {d:"2025.09.03", tag:"RELEASE",
+   t:"メジャーデビューシングル「キセキのカゲ」リリース", k:"메이저 데뷔 싱글 'キセキのカゲ' 발매",
+   b:"インディーズ時代から歌い続けてきた「キセキのカゲ」で、FEEDBACKがメジャーデビューしました。", bk:"인디 시절부터 불러 온 'キセキのカゲ'로 FEEDBACK이 메이저 데뷔했습니다."}
+];
+const MEMBERS = [
+  {id:"ren",   c:"#ff2d8a", part:"VOCAL",    jp:"黒崎 蓮",   en:"REN KUROSAKI",   kr:"쿠로사키 렌",   from:"千葉 / 치바",     age:21, q:"うるせぇ、聴け。", qk:"시끄러, 들어."},
+  {id:"shion", c:"#a58be0", part:"GUITAR",   jp:"水瀬 紫苑", en:"SHION MINASE",   kr:"미나세 시온",   from:"京都 / 교토",     age:26, q:"ええ耳してはるなぁ。", qk:"귀가 참 좋으시네.", note:"全曲の作詞・作曲 / 전곡 작사·작곡"},
+  {id:"haku",  c:"#d23a50", part:"BASS",     jp:"白鳥 珀",   en:"HAKU SHIRATORI", kr:"시라토리 하쿠", from:"北海道 / 홋카이도", age:24, q:"特にない。", qk:"딱히 없어."},
+  {id:"sora",  c:"#7ec8e3", part:"DRUMS",    jp:"日向 空",   en:"SORA HINATA",    kr:"히나타 소라",   from:"大阪 / 오사카",   age:27, q:"みんな、おおきに。待っとってな。", qk:"다들 고맙데이. 기다리고 있으래이.", note:"リーダー / 리더"},
+  {id:"amane", c:"#5cc9a7", part:"KEYBOARD", jp:"霧島 天音", en:"AMANE KIRISHIMA",kr:"키리시마 아마네", from:"横浜 / 요코하마", age:29, q:"飴、ある？", qk:"사탕 있어?"}
+];
+const TRACKS = [
+  {t:"解放解放",     k:"해방해방",         yt:"du8DyQ-J2TE", c:"#ff2d8a"},
+  {t:"終電前の影",   k:"막차 전의 그림자", yt:"Dths5NzGyo0", c:"#a58be0"},
+  {t:"ハズレの鼓動", k:"꽝의 심장 소리",   yt:"_GrLAqfTkO4", c:"#d23a50"},
+  {t:"青い歯車",     k:"파란 톱니바퀴",    yt:"w8th-gFRgBk", c:"#7ec8e3"},
+  {t:"黒い脈動",     k:"검은 맥동",        yt:"d7GGr13hHTo", c:"#5cc9a7"}
+];
+/* ================================================== */
+
+const $=s=>document.querySelector(s);
+
+$("#newsList").innerHTML=NEWS.map(n=>`<li><time>${n.d}</time><span class="tag ${n.hot?'hot':''}">${n.tag}</span>
+<details><summary><b>${n.t}</b><span class="kr">${n.k}</span></summary><div class="body">${n.b}<span class="kr">${n.bk}</span></div></details></li>`).join("");
+
+$("#liveTitle").textContent=LIVE.title; $("#liveDate").textContent=LIVE.dateText;
+$("#liveVenue").innerHTML=LIVE.venue; $("#liveOpen").textContent=LIVE.open; $("#liveTicket").innerHTML=LIVE.ticket;
+(function(){const d=Math.ceil((new Date(LIVE.date)-new Date())/864e5);
+  $("#cd").innerHTML=d>0?`<span>D-</span>${d}`:(d===0?"TODAY":"<span>THANK YOU</span>");
+  $("#cdBar").style.width=Math.max(0,Math.min(100,(LIVE.total-d)/LIVE.total*100))+"%";})();
+
+$("#memList").innerHTML=MEMBERS.map(m=>`<article class="card rv" style="--c:${m.c}">
+<div class="pic"><img src="img/${m.id}.jpg" alt="${m.jp}" loading="lazy"></div>
+<div class="tx"><span class="part">${m.part}</span><h3>${m.jp}<small>${m.en} / ${m.kr}</small></h3>
+<dl><dt>FROM</dt><dd>${m.from}</dd><dt>AGE</dt><dd>${m.age}</dd>${m.note?`<dt>NOTE</dt><dd>${m.note}</dd>`:""}</dl>
+<div class="q"><q>${m.q}</q><span class="kr">"${m.qk}"</span></div></div></article>`).join("");
+
+function thumb(el,id){el.dataset.id=id;el.classList.remove("on");el.innerHTML="";el.style.backgroundImage=`url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;}
+function play(el){el.classList.add("on");el.innerHTML=`<iframe src="https://www.youtube.com/embed/${el.dataset.id}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;}
+document.querySelectorAll(".yt[data-id]").forEach(el=>thumb(el,el.dataset.id));
+document.addEventListener("click",e=>{const y=e.target.closest(".yt");if(y&&!y.classList.contains("on"))play(y);});
+
+const pl=$("#player"),tl=$("#trackList");
+tl.innerHTML=TRACKS.map((t,i)=>`<li data-i="${i}" style="--c:${t.c}"><span class="n">${String(i+1).padStart(2,"0")}</span><span class="dot"></span><span><b>${t.t}</b><small>${t.k}</small></span></li>`).join("");
+function sel(i,auto){tl.querySelectorAll("li").forEach((l,j)=>l.classList.toggle("act",i===j));thumb(pl,TRACKS[i].yt);if(auto)play(pl);}
+tl.addEventListener("click",e=>{const li=e.target.closest("li");if(li)sel(+li.dataset.i,true);});
+sel(0,false);
+
+addEventListener("scroll",()=>$("#nav").classList.toggle("solid",scrollY>60));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
